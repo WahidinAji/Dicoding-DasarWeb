@@ -25,6 +25,9 @@
       color: green;
     }
 
+    /* Untuk menggunakan pseudo-elemen kita gunakan dua buah tanda titik dua (::) kemudian diikuti dengan pseudo-elemen nya. Sebenarnya kita bisa menggunakan satu buah tanda tanda titik dua (:) namun kita perlu membedakannya dengan pseudo-class. Karena itulah baiknya ketika menggunakan pseudo-elemen, gunakanlah dua buah titik dua (::).
+
+    Pseudo-element tidak hanya ::before dan ::after. Dengan pseudo-elemen kita juga dapat menentukan rule pada awal karakter konten elemen. */
     blockquote::before,
     blockquote::after {
       content: '"';
@@ -40,6 +43,26 @@
     blockquote:hover {
       color: green;
     }
+
+    .eto {
+      color: red;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: xx-large;
+    }
+
+    .eto:hover {
+      color: yellow;
+    }
+
+    /* Rule styling akan diterapkan pada karakter pertama disebuah paragraf */
+    p::first-letter {
+      font-size: 32px;
+      font-weight: bold;
+      color: saddlebrown;
+    }
+
+    /*https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements lebih lengkapnya*/
+    /*https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes lebih lengkapnya*/
   </style>
 </head>
 
@@ -48,6 +71,11 @@
   <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius error explicabo ipsum molestiae
     necessitatibus nesciunt possimus reprehenderit sed voluptates. Aliquam aspernatur autem est nobis officia
     praesentium quas recusandae rem.</blockquote>
+  <div class="eto">anu</div>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deserunt, dicta laudantium quae quam sequi
+    soluta vitae! A, architecto beatae, consequuntur et eveniet fuga laudantium molestias praesentium temporibus, unde
+    velit.</p>
 </body>
 
 </html>
