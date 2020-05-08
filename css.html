@@ -1,8 +1,38 @@
-font-variant
-Kita yang terbiasa dengan aplikasi document editor seperti Microsoft Word tentu tahu atau sudah mencoba fitur small caps. Fitur ini dapat membuat teks menjadi kapital tetapi dituliskan secara kecil dan merapat, seperti ini:
+Text Indent
+Dalam membuat sebuah dokumen tidak jarang kita membutuhkan jarak/lekuk di awal paragraf. Hal tersebut dapat dilakukan
+pada website dengan menerapkan properti text-indent. Kita dapat menentukan nilai properti ini melalui perhitungan
+panjang dalam px, em, dan in atau bisa menggunakan nilai persentase (%). Nilai persentase dihitung berdasarkan lebar
+dari induk elemen. Berikut merupakan contoh penggunaannya:
 
-2019120618260941081d1a63bc20c02965d60168b3bc0d.png
+p#first {
+text-indent: 2em;
+}
 
-Untuk membuat tulisan seperti gambar di atas, kita bisa memanfaatkan properti font-variant dengan nilai small-caps pada propertinya.
+p#second {
+text-indent: 25%;
+}
 
-Properti font-variant dapat diaplikasikan ke seluruh elemen yang ada di HTML dan nilainya dapat diturunkan pada elemen turunannya.
+p#third {
+text-indent: -35px;
+}
+
+
+//Text Align
+
+Bagaimana? Pasti kita sudah familiar dengan nilai-nilai tersebut? Berikut contoh penggunaan dari properti text-align:
+
+p#first {
+text-align: left;
+}
+
+p#second {
+text-align: right;
+}
+
+p#third {
+text-align: center;
+}
+
+p#fourth {
+text-align: justify;
+}
