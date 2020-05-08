@@ -1,38 +1,111 @@
-Text Indent
-Dalam membuat sebuah dokumen tidak jarang kita membutuhkan jarak/lekuk di awal paragraf. Hal tersebut dapat dilakukan
-pada website dengan menerapkan properti text-indent. Kita dapat menentukan nilai properti ini melalui perhitungan
-panjang dalam px, em, dan in atau bisa menggunakan nilai persentase (%). Nilai persentase dihitung berdasarkan lebar
-dari induk elemen. Berikut merupakan contoh penggunaannya:
+  <!DOCTYPE html>
+  <html lang="en">
 
-p#first {
-text-indent: 2em;
-}
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
 
-p#second {
-text-indent: 25%;
-}
+      a:hover {
+        color: red;
+        text-shadow: aqua;
+        font-family: cursive;
+      }
 
-p#third {
-text-indent: -35px;
-}
+      a:active {
+        color: yellow;
+      }
 
+      footer {
+        font-size: x-large;
+        color: sienna;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+      .none{
+        text-transform: none;
+        color: red;
+      }
+      .capitalize{
+        text-transform: capitalize;
+        color: yellow;
+      }
+      .lowercase{
+        text-transform: lowercase;
+        color: green;
+      }
+      .uppercase{
+        text-transform: uppercase;
+        color: blue;
+      }
+    </style>
+  </head>
 
-//Text Align
+  <body>
+    <header>
+      Text Decoration
+      Properti ini paling populer digunakan ketika kita ingin membuat garis bawah atau underline pada teks. Tapi tak
+      hanya
+      itu, ada beberapa nilai lain yang dapat kita gunakan untuk properti ini. Detailnya sebagai berikut:
 
-Bagaimana? Pasti kita sudah familiar dengan nilai-nilai tersebut? Berikut contoh penggunaan dari properti text-align:
+      Nilai properti
 
-p#first {
-text-align: left;
-}
+      Fungsi
 
-p#second {
-text-align: right;
-}
+      text-decoration: underline
 
-p#third {
-text-align: center;
-}
+      Memberikan garis bawah (underline) pada teks
 
-p#fourth {
-text-align: justify;
-}
+      text-decoration: overline
+
+      Memberikan garis atas (overline) pada teks
+
+      text-decoration: line-through
+
+      Memberikan efek tulisan dicoret (strikethrough)
+
+      text-decoration: none
+
+      Menghilangkan dekorasi teks yang ada pada elemen
+
+      Dengan menggunakan text-decoration, kita dapat menghilangkan efek underline pada link yang ditampilkan dengan
+      memberikan nilai text-decoration: none pada elemen <a>
+        <a href="https://www.google.com/">contoh link yang decorationnya dihilangkan (garis bawahnya.)</a>
+    </header>
+    <footer>
+      Text Transform
+      Pasti kita pernah mencoba fitur pada document editor yang dapat mengubah kapitalisasi pada teks, bukan? Fitur
+      ini sangat membantu di kala kita ingin mengubah kapitalisasi tanpa harus menuliskan kembali teksnya. Pada CSS
+      juga terdapat fitur serupa, yaitu dengan menggunakan properti text-transform. Ketika kita menerapkan properti
+      text-transform pada elemen teks, maka kapitalisasi akan berubah ketika halaman di-render tanpa harus mengubahnya
+      pada dokumen HTML.
+
+      Properti ini dapat berisikan nilai sebagai berikut:
+
+      Nilai Properti
+
+      Fungsi
+      <div class="none">
+        text-transform: none
+        Teks yang ditampilkan sama seperti yang dituliskan
+      </div>
+      <div class="capitalize">
+        text-transform: capitalize
+        Membuat huruf pertama besar pada tiap katanya
+      </div>
+      <div class="lowercase">
+        text-transform: lowercase
+        Membuat seluruh teks menggunakan huruf kecil
+      </div>
+      <div class="uppercase">
+        Text-transform: uppercase
+        Membuat seluruh teks menggunakan huruf besar
+      </div>
+
+    </footer>
+  </body>
+
+  </html>
