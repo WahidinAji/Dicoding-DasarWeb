@@ -1,8 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
 body {
-  font-family: sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
-h2, h3 {
+/* @font-face {
+  font-family: 'myFont';
+  src: url(../font/lucida-calligraphy-italic.ttf);
+}
+
+body {
+  font-family: 'myFont';
+  text-transform: uppercase;
+} */
+
+h2,
+h3 {
   color: #00a2c6;
 }
 
