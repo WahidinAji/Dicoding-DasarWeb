@@ -3,39 +3,28 @@
 
 <head>
   <style>
-    div {
-      height: 200px;
-      width: 200px;
-      background-color: lightgreen;
-      border: 10px solid cornflowerblue;
-      padding: 20px;
+    p {
+      border: 4px double #00a2c6;
+      width: 275px;
+      padding-top: 10px;
+      padding-right: 15px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      margin: 10px 10px 25px 20px;
     }
 
-    .content {
-      box-sizing: content-box;
-    }
-
-    .box {
-      box-sizing: border-box;
-    }
-
-    .box {
-      border: 4px dashed #00a2c6;
-      width: 200px;
+    p.example {
+      padding: 10px;
     }
   </style>
 </head>
 
 <body>
-  <div class="content">
-  </div>
-  <p>Elemen menerapkan <code>box-sizing: content-box;</code> Ukuran box secara keseluruhan akan menjadi 260px lebar,
-    260px tinggi; 260 = 200 + 20 + 20 + 10 + 10</p>
-  <br>
-  <div class="box">
-  </div>
-  <p>Elemen menerapkan <code>box-sizing: border-box;</code> Ukuran box akan tetap 200px lebar, 200px tinggi meskipun
-    menerapkan padding dan border</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur beatae commodi dignissimos eaque fugiat
+    inventore maiores neque nisi sint. A dolore eaque fuga, iste minus porro provident sit tempore ullam.</p>
+  <p class="example">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet assumenda blanditiis cum dignissimos
+    enim esse excepturi illum inventore maiores minima, nemo nisi obcaecati officia pariatur qui quibusdam sed. Ab,
+    dolorum?</p>
 </body>
 
 </html>
