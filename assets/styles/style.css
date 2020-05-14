@@ -1,26 +1,41 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
-
-body {
-  font-family: 'Quicksand', sans-serif;
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
 }
 
-/* @font-face {
-  font-family: 'myFont';
-  src: url(../font/lucida-calligraphy-italic.ttf);
+nav a:hover {
+  font-weight: 600;
 }
 
-body {
-  font-family: 'myFont';
-  text-transform: uppercase;
-} */
-
-h2,
-h3 {
-  color: #00a2c6;
+.profile header {
+  text-align: center;
 }
 
 footer {
-  padding: 20px;
+  font-weight: bold;
+  text-align: center;
+  background: #00a2c6;
   color: white;
-  background-color: #00a2c6;
+  padding: 20px;
+}
+
+p {
+  color: gray;
+}
+
+p {
+  color: #666666;
+}
+
+p {
+  color: #666;
+}
+
+p {
+  color: rgb(102, 102, 102);
+}
+
+body {
+  color: steelblue;
 }
