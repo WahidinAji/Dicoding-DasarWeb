@@ -1,3 +1,2 @@
-Pada contoh di atas kita bisa lihat bahwa ketika elemen heading menerapkan properti position dengan nilai absolute maka elemen di bawahnya (paragraf) akan menempati posisi yang sebelumnya ditempati oleh elemen heading tersebut. 
-
-Dan perpindahan posisi ketika menggunakan absolute akan relatif pada jendela browser. Kita bisa lihat bahwa elemen heading bergeser 500px dari kiri. Tapi selain relatif terhadap jendela browser, nilai ini juga dapat relatif pada elemen yang menaunginya (elemen induk) selama elemen tersebut juga berada di luar normal flow. Namun jika tidak, elemen akan menghiraukan elemen induknya tersebut. Contohnya:
+Fixed Positioning
+Fixed positioning merupakan absolute position namun posisinya selalu relatif pada jendela browser (meskipun diletakan di dalam induk elemen diluar dari flow normal), bahkan ketika pengguna melakukan scrolling posisinya akan tetap nampak pada posisinya di layar.
