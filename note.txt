@@ -1,9 +1,6 @@
-Normal Flow
-Dalam flow normal, setiap elemen block ditempatkan di bawah elemen sebelumnya. Karena ini merupakan cara standar browser memperlakukan elemen HTML, kita tidak perlu menetapkan nilai properti position ketika ingin membuat perilaku seperti ini tetapi secara sintaks perilaku ini ditetapkan dengan nilai static.
+Relative Positioning
+Seperti yang kita ketahui sebelumnya, dengan menetapkan relative pada properti position, kita dapat melakukan perpindahan posisi elemen ke atas, kanan, bawah, maupun kiri. Perpindahan posisi yang dilakukan tidak akan berpengaruh terhadap posisi elemen di sekitarnya karena dengan  relative positioning, elemen tersebut akan dipindahkan dari normal flow. Untuk menggunakan relative positioning kita tetapkan nilai relative pada properti position.
 
 
-Pada contoh di atas kita tidak menetapkan nilai lebar pada elemen heading, tapi bisa kita lihat bahwa elemen heading tersebut mencakup seluruh lebar ruang yang ada pada jendela browser. 
 
-Sedangkan elemen paragraf kita atur lebarnya dengan nilai 450px sehingga elemen tersebut tidak mencakup seluruh lebar ruang yang ada. Elemen paragraf selanjutnya tetap ditampilkan di bawahnya meskipun masih terdapat ruang yang cukup disampingnya.
-
-Hal tersebut merupakan contoh dari gambaran bagaimana flow normal bekerja.
+Pada contoh di atas, setelah menetapkan nilai position pada paragraf kedua, kita mengubah posisinya menjadi 10 pixel lebih bawah dan 100px lebih ke kanan dari posisi yang seharusnya. Perlu kita ingat bahwa perpindahan posisi mengacu pada posisi elemen seharusnya berada.
