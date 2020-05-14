@@ -1,54 +1,9 @@
-Perbedaan Static Flow dan Non-Static Flow.
-Sebenarnya CSS memiliki dua buah flow yang bisa digunakan untuk menampilkan elemen, yakni static dan non-static. Agar mudah memahami perbedaan antar keduanya, kita gambarkan sebuah halaman website dengan tampilan tiga dimensi.
+Normal Flow
+Dalam flow normal, setiap elemen block ditempatkan di bawah elemen sebelumnya. Karena ini merupakan cara standar browser memperlakukan elemen HTML, kita tidak perlu menetapkan nilai properti position ketika ingin membuat perilaku seperti ini tetapi secara sintaks perilaku ini ditetapkan dengan nilai static.
 
-Bayangkan kita memiliki tiga buat elemen div berukuran 200px x 200px yang masing-masing memiliki warna yang berbeda.
 
-.box {
-   width: 200px;
-   height: 200px;
-}
- 
-.first {
-   background-color: #60d0a8;
-}
- 
-.second {
-   background-color: #6495ed;
-}
- 
-.third {
-   background-color: #ffa500;
-}
-Karena kita tidak mengatur properti position dari ketiga elemen tersebut, maka tiap elemen akan ditampilkan dengan static flow seperti ini:
+Pada contoh di atas kita tidak menetapkan nilai lebar pada elemen heading, tapi bisa kita lihat bahwa elemen heading tersebut mencakup seluruh lebar ruang yang ada pada jendela browser. 
 
-20191206221017eed63307e1d442bf305a00d7012e83fe.jpeg
+Sedangkan elemen paragraf kita atur lebarnya dengan nilai 450px sehingga elemen tersebut tidak mencakup seluruh lebar ruang yang ada. Elemen paragraf selanjutnya tetap ditampilkan di bawahnya meskipun masih terdapat ruang yang cukup disampingnya.
 
-Ketika kita ingin mengubah letak kotak biru (kotak kedua) dengan menggunakan margin-top: 20px; tentu akan berpengaruh pada posisi elemen di bawahnya.
-
-.second {
-   background-color: #6495ed;
-   margin-top: 20px;
-}
-201912062212001fdb59982b39e930a26e6a07fcb5e6c9.png
-
-Pada ilustrasi di atas kita bisa lihat bahwa kotak yang berwarna oranye ikut bergeser ke bawah. Berbeda ketika kita menerapkan properti position yang dapat membuat elemen keluar dari static flow. Contohnya kita menerapkan properti position dengan nilai relatif.
-
-.second {
-   background-color: #6495ed;
-   position: relative;
-}
-201912062214046584bac9ac55ab9c3ac2aba6cf7bf15b.png
-
-Pada tampilan browser mungkin tidak terdapat perbedaan apapun setelah menerapkan nilai relative pada atribut position. Namun sebenarnya elemen yang menerapkannya akan diangkat dari luar static flow seperti yang ditampilkan pada ilustrasi 3D. Sehingga elemen tersebut dapat leluasa berpindah posisi tanpa mempengaruhi elemen yang berada pada static flow.
-
-Untuk mengubah posisi elemen yang berada di non-static flow, kita dapat menggunakan properti top, right, bottom, maupun left.
-
-.second {
-   background-color: #6495ed;
-   position: relative;
-   top: 30px;
-   left: 10px;
-}
-201912062214376f42b33fe7daba6acb7680217e48b80d.png
-
-Perlu kita ingat ya, bahwa properti top, left, right dan bottom pada CSS hanya akan berpengaruh pada elemen yang menerapkan non-static flow (elemen yang menerapkan nilai relative, absolute, dan fixed pada properti position).
+Hal tersebut merupakan contoh dari gambaran bagaimana flow normal bekerja.
