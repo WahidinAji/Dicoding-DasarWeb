@@ -1,11 +1,54 @@
-Positioning
-Kita sudah mengetahui cara mengubah posisi dari sebuah elemen dengan menggunakan margin. Namun ketika melakukannya, posisi elemen lain di sekitarnya akan terpengaruh. Lantas bagaimana jika kita ingin memindahkan tanpa mengganggu posisi elemen lainnya? Solusinya kita perlu mengubah positioning schema dengan menggunakan properti position dalam mengontrol letak elemen tersebut. Berikut nilai dari properti position yang ada pada CSS:
+Perbedaan Static Flow dan Non-Static Flow.
+Sebenarnya CSS memiliki dua buah flow yang bisa digunakan untuk menampilkan elemen, yakni static dan non-static. Agar mudah memahami perbedaan antar keduanya, kita gambarkan sebuah halaman website dengan tampilan tiga dimensi.
 
-Normal Flow / Static Flow : Merupakan default behaviour yang dimiliki elemen, di mana setiap elemen block akan ditampilkan dalam baris baru ketika dibuat. Sehingga setiap elemen block selalu muncul di bawah dari elemen block sebelumnya. Bahkan jika masih terdapat ruang kosong pada samping elemennya, mereka tidak akan nampak bersebelahan.
+Bayangkan kita memiliki tiga buat elemen div berukuran 200px x 200px yang masing-masing memiliki warna yang berbeda.
 
-Relative Positioning : Membuat elemen bisa berpindah posisi ke atas, kanan, bawah, maupun kiri dari posisi semula atau posisi seharusnya elemen tersebut berada. Perpindahan posisi ini tidak akan berpengaruh terhadap posisi elemen di sekitarnya karena ketika menggunakan relative positioning, elemen tersebut akan dipindahkan dari normal flow.
+.box {
+   width: 200px;
+   height: 200px;
+}
+ 
+.first {
+   background-color: #60d0a8;
+}
+ 
+.second {
+   background-color: #6495ed;
+}
+ 
+.third {
+   background-color: #ffa500;
+}
+Karena kita tidak mengatur properti position dari ketiga elemen tersebut, maka tiap elemen akan ditampilkan dengan static flow seperti ini:
 
-Absolute Positioning : Sama seperti relative, elemen akan dipindahkan keluar dari normal flow sehingga kita dapat memindahkan posisi elemen ke atas, kanan, bawah, maupun kiri secara leluasa tanpa mengganggu elemen di sekitarnya. Namun posisinya relatif pada jendela browser dan induk elemen selama induk elemen juga berada di luar dari normal flow.
+20191206221017eed63307e1d442bf305a00d7012e83fe.jpeg
 
-Fixed Positioning : Merupakan absolute position namun posisinya selalu relatif pada jendela browser. Bahkan ketika pengguna scrolling pun, posisinya di layar akan tetap tak berubah. 
-Sebelum kita membahas satu persatu skema tersebut, mungkin kita perlu memahami lebih detail lagi apa sebenarnya normal flow atau biasa disebut “static flow” itu, dan mengapa untuk memindahkan posisi elemen kita perlu mengeluarkannya dari static flow
+Ketika kita ingin mengubah letak kotak biru (kotak kedua) dengan menggunakan margin-top: 20px; tentu akan berpengaruh pada posisi elemen di bawahnya.
+
+.second {
+   background-color: #6495ed;
+   margin-top: 20px;
+}
+201912062212001fdb59982b39e930a26e6a07fcb5e6c9.png
+
+Pada ilustrasi di atas kita bisa lihat bahwa kotak yang berwarna oranye ikut bergeser ke bawah. Berbeda ketika kita menerapkan properti position yang dapat membuat elemen keluar dari static flow. Contohnya kita menerapkan properti position dengan nilai relatif.
+
+.second {
+   background-color: #6495ed;
+   position: relative;
+}
+201912062214046584bac9ac55ab9c3ac2aba6cf7bf15b.png
+
+Pada tampilan browser mungkin tidak terdapat perbedaan apapun setelah menerapkan nilai relative pada atribut position. Namun sebenarnya elemen yang menerapkannya akan diangkat dari luar static flow seperti yang ditampilkan pada ilustrasi 3D. Sehingga elemen tersebut dapat leluasa berpindah posisi tanpa mempengaruhi elemen yang berada pada static flow.
+
+Untuk mengubah posisi elemen yang berada di non-static flow, kita dapat menggunakan properti top, right, bottom, maupun left.
+
+.second {
+   background-color: #6495ed;
+   position: relative;
+   top: 30px;
+   left: 10px;
+}
+201912062214376f42b33fe7daba6acb7680217e48b80d.png
+
+Perlu kita ingat ya, bahwa properti top, left, right dan bottom pada CSS hanya akan berpengaruh pada elemen yang menerapkan non-static flow (elemen yang menerapkan nilai relative, absolute, dan fixed pada properti position).
