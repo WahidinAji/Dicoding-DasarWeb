@@ -1,6 +1,4 @@
-Relative Positioning
-Seperti yang kita ketahui sebelumnya, dengan menetapkan relative pada properti position, kita dapat melakukan perpindahan posisi elemen ke atas, kanan, bawah, maupun kiri. Perpindahan posisi yang dilakukan tidak akan berpengaruh terhadap posisi elemen di sekitarnya karena dengan  relative positioning, elemen tersebut akan dipindahkan dari normal flow. Untuk menggunakan relative positioning kita tetapkan nilai relative pada properti position.
+Absolute Positioning
+Ketika properti position diberikan nilai absolute, akan berperilaku sama dengan relative. Elemen akan dikeluarkan dari normal flow sehingga jika elemen dipindahkan posisinya tidak akan berpengaruh pada elemen lain di sekitarnya. 
 
-
-
-Pada contoh di atas, setelah menetapkan nilai position pada paragraf kedua, kita mengubah posisinya menjadi 10 pixel lebih bawah dan 100px lebih ke kanan dari posisi yang seharusnya. Perlu kita ingat bahwa perpindahan posisi mengacu pada posisi elemen seharusnya berada.
+Namun yang membedakannya adalah elemen ini benar-benar tidak dianggap ada oleh elemen pada normal flow. Akibatnya, lokasi awal elemen yang diberikan nilai absolute akan ditempati oleh elemen di bawahnya.
