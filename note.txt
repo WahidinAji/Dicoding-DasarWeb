@@ -1,4 +1,3 @@
-Absolute Positioning
-Ketika properti position diberikan nilai absolute, akan berperilaku sama dengan relative. Elemen akan dikeluarkan dari normal flow sehingga jika elemen dipindahkan posisinya tidak akan berpengaruh pada elemen lain di sekitarnya. 
+Pada contoh di atas kita bisa lihat bahwa ketika elemen heading menerapkan properti position dengan nilai absolute maka elemen di bawahnya (paragraf) akan menempati posisi yang sebelumnya ditempati oleh elemen heading tersebut. 
 
-Namun yang membedakannya adalah elemen ini benar-benar tidak dianggap ada oleh elemen pada normal flow. Akibatnya, lokasi awal elemen yang diberikan nilai absolute akan ditempati oleh elemen di bawahnya.
+Dan perpindahan posisi ketika menggunakan absolute akan relatif pada jendela browser. Kita bisa lihat bahwa elemen heading bergeser 500px dari kiri. Tapi selain relatif terhadap jendela browser, nilai ini juga dapat relatif pada elemen yang menaunginya (elemen induk) selama elemen tersebut juga berada di luar normal flow. Namun jika tidak, elemen akan menghiraukan elemen induknya tersebut. Contohnya:
