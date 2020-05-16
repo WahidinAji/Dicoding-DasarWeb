@@ -1,2 +1,8 @@
-Floating
-Sederhananya properti float dapat membuat elemen berada pada sebelah kanan atau kiri. Saat diterapkan pada elemen inline, properti float juga memungkinkan elemen di sekitarnya mengelilingi elemen tersebut (wrap). 
+Hal ini dapat dilakukan dengan mudah menggunakan properti float, karena nilai dari properti ini adalah left dan right. Nilai tersebut menunjukan posisi elemen harus diletakkan. Contoh penerapannya seperti berikut ini:
+
+
+Dari contoh di atas, kita bisa melihat pada selector .left-content dan .right-content ditetapkan properti float dengan nilai left dan right, sehingga elemen tersebut dapat diposisikan secara bersebelahan. 
+
+Ketika menggunakan properti float jangan lupa menentukan ukuran lebar dari propertinya, karena nilai dari lebar menentukan seberapa banyak ruang yang dicakup oleh elemen. Pada contoh di atas kita menetapkan nilai 30% untuk konten kiri dan 70% untuk konten sebelah kanan.
+
+Lantas jika nilainya hanya left dan right, bagaimana jika ada lebih dari dua kolom dalam menyusun layout? Hal tersebut sangat mudah dilakukan. Kita hanya perlu menetapkan nilai left pada ketiga kolomnya, lantas kolom akan tampil bersebelahan sesuai urutan penulisan elemen.
