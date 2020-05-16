@@ -1,2 +1,2 @@
-Fixed Positioning
-Fixed positioning merupakan absolute position namun posisinya selalu relatif pada jendela browser (meskipun diletakan di dalam induk elemen diluar dari flow normal), bahkan ketika pengguna melakukan scrolling posisinya akan tetap nampak pada posisinya di layar.
+Floating
+Sederhananya properti float dapat membuat elemen berada pada sebelah kanan atau kiri. Saat diterapkan pada elemen inline, properti float juga memungkinkan elemen di sekitarnya mengelilingi elemen tersebut (wrap). 
