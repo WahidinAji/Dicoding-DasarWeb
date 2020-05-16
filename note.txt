@@ -1,8 +1,65 @@
-Hal ini dapat dilakukan dengan mudah menggunakan properti float, karena nilai dari properti ini adalah left dan right. Nilai tersebut menunjukan posisi elemen harus diletakkan. Contoh penerapannya seperti berikut ini:
+Permasalahan penerapan float
+Properti float terlihat sangat mudah untuk digunakan, baik dalam text wrapping maupun dalam penyusunan layout. Tetapi bukan berarti ketika menggunakan properti ini, tiada efek samping atau masalah yang ditimbulkan. Apa itu?
 
+Jika sebuah elemen induk hanya memiliki satu elemen dengan menerapkan properti float, ia akan memiliki nilai tinggi 0px. Contohnya seperti berikut:
 
-Dari contoh di atas, kita bisa melihat pada selector .left-content dan .right-content ditetapkan properti float dengan nilai left dan right, sehingga elemen tersebut dapat diposisikan secara bersebelahan. 
+<!doctype html>
+<html lang="en">
+<head>
+   <style>
+       .container {
+           width: 800px;
+           border: 4px solid black;
+       }
+ 
+       img {
+           float: left;
+           margin: 10px;
+       }
+   </style>
+</head>
+<body>
+<div class="container">
+   <img src="https://i.imgur.com/cs2BJzw.jpg" width="200px" alt="dicoding">
+</div>
+</body>
+</html>
+Jika dijalankan pada browser akan menghasilkan tampilan seperti:
 
-Ketika menggunakan properti float jangan lupa menentukan ukuran lebar dari propertinya, karena nilai dari lebar menentukan seberapa banyak ruang yang dicakup oleh elemen. Pada contoh di atas kita menetapkan nilai 30% untuk konten kiri dan 70% untuk konten sebelah kanan.
+20191206224341f5181f6e068e66c4ce08188671db1955.png
 
-Lantas jika nilainya hanya left dan right, bagaimana jika ada lebih dari dua kolom dalam menyusun layout? Hal tersebut sangat mudah dilakukan. Kita hanya perlu menetapkan nilai left pada ketiga kolomnya, lantas kolom akan tampil bersebelahan sesuai urutan penulisan elemen.
+Pada contoh tersebut kita bisa melihat bahwa elemen gambar berada di dalam sebuah container div. Tetapi container tersebut tidak memiliki tinggi senilai gambar yang ditampilkan. Mengapa bisa demikian? Untuk lebih jelasnya kita coba tambahkan paragraf di dalam container tersebut tanpa menggunakan properti float.
+
+<!doctype html>
+<html lang="en">
+<head>
+   <style>
+       .container {
+           width: 800px;
+           border: 4px solid black;
+       }
+ 
+       img {
+           float: left;
+           margin: 10px;
+       }
+   </style>
+</head>
+<body>
+<div class="container">
+   <img src="https://i.imgur.com/cs2BJzw.jpg" width="200px" alt="dicoding">
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci architecto aspernatur dolorem
+       doloremque eum excepturi fuga hic, molestias obcaecati officia perferendis perspiciatis qui saepe ut velit
+       veniam vitae voluptatum.</p>
+</div>
+</body>
+</html>
+Hasilnya:
+
+20191206224528c9874fe39ce9b93e8410fb5db456d3bc.png
+
+Hal ini menunjukkan bahwa elemen yang menerapkan float “tidak dianggap ada” oleh induk elemen yang menaunginya karena jika menggunakan float, elemen akan dikeluarkan dari normal flow.
+
+Bagaimana Anda menanganinya? 
+
+Terdapat dua cara yang akan kita bahas, yakni dengan pertama, menggunakan properti clear dan kedua, menetapkan nilai overflow: auto pada container.
