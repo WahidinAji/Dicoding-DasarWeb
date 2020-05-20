@@ -1,11 +1,4 @@
-Clear Property
-Cara yang pertama adalah dengan menggunakan properti clear. Properti clear memang dibuat untuk menghilangkan sifat float, dengan demikian elemen yang menerapkan properti float akan kembali “dianggap ada”. Namun untuk menerapkan properti ini kita perlu membuat sebuah elemen kosong (biasanya menggunakan div tanpa konten) yang menerapkan properti clear.
+overflow: auto;
+Cara yang kedua adalah dengan menetapkan properti overflow: auto; pada elemen yang menampung elemen float. Sebagian developer lebih memilih menggunakan cara ini karena lebih praktis dan tidak perlu membuat elemen baru ketika menggunakannya.
 
-Nilai dari properti clear merupakan nilai yang digunakan pada properti float karena properti clear akan menghapus sifat float sesuai dengan nilai yang ditetapkan. Contohnya seperti ini:
-
-
-Jika kita mencoba mengubah clear menjadi clear: right;, maka akan kembali seperti hasil sebelum menerapkannya.
-
-2019120622485120d38f8c1f9e107f3aee35dca0887b8e.png
-
-Lalu bagaimana jika terdapat dua elemen yang menerapkan nilai float berbeda (left dan right)?  Terdapat satu nilai lagi yang dapat menghilangkan keuda sifat float tersebut, yakni nilai both. Gunakanlah nilai tersebut jika kita ingin sepenuhnya menghilangkan sifat float pada elemen.
+Untuk menerapkannya sangatlah simpel. Cukup tambahkan properti overflow dengan nilai auto pada container.
