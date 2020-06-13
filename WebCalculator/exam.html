@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Manipulating Attribute</title>
+</head>
+
+<body>
+  <figure>
+    <img id="catImage" src="https://i.ibb.co/9WT6LG6/two-three.jpg" alt="three-cats" width="600px" />
+    <figcaption id="caption">Tiga Anak Kucing</figcaption>
+  </figure>
+
+  <script>
+    //manipulasi element bagian 1
+    // let cat = document.getElementById("catImage");
+    let catImage = document.querySelector("#catImage");
+    catImage.setAttribute("src", "https://i.ibb.co/55VG7vL/three-cat.jpg");
+
+    //manipulasi element bagian 2
+    let caption = document.querySelector("#caption");
+    caption.innerHTML = '<em>Tiga Anak Kucing</em>';
+
+    //manipulasi element bagian 3 Membuat dan Menambahkan Elemen Baru
+    let newElement = document.createElement('p');
+    newElement.innerHTML = 'Menekan gambar kucing sebanyak <span id="count">0</span> kali';
+    document.body.appendChild(newElement);
+
+    //manipulasi element bagian 4 Menambahkan Aksi (Event) pada Element
+    catImage.addEventListener('click', function (event) {
+      document.querySelector('#count').innerText++;
+    });
+  </script>
+</body>
+
+</html>
