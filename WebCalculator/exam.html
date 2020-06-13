@@ -12,7 +12,7 @@
 
   <script>
     const cacheKey = "NUMBER";
-    if (typeof (Storage) !== "undefined") {
+    if (typeof (Storage) !==  "undefined") {
 
       // pengecekkan apakah data sessionStorage dengan key NUMBER tersedia atau belum
       if (localStorage.getItem(cacheKey) === "undefined") {

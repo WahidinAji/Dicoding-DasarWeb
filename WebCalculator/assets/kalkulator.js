@@ -57,8 +57,15 @@ function performCalculation() {
   } else {
     result = parseInt(calculator.firstNumber) - parseInt(calculator.displayNumber)
   }
-
+  const history = {
+    firstNumber: calculator.firstNumber,
+    secondNumber: calculator.displayNumber,
+    operator: calculator.operator,
+    result: result
+  }
+  pushHistory(history);
   calculator.displayNumber = result;
+  renderHistory();
 }
 
 const buttons = document.querySelectorAll(".button");
@@ -96,8 +103,4 @@ for (let button of buttons) {
     inputDigit(target.innerText);
     updateDisplay()
   });
-}
-
-function tambah() {
-  calculator.firstNumber + calculator.waitingForSecondNumber;
 }
